@@ -64,8 +64,8 @@ const init = () => {
   initializeVariables();
 
   // Disable scroll restoration on browser back navigation.
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
+  if ('scrollRestoration' in Shows) {
+    Shows.scrollRestoration = 'manual';
   }
   // Scroll to the top of the page.
   window.scrollTo(0, 0);

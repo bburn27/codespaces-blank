@@ -9,7 +9,7 @@ const routes = {
   "/": "Home",
   "/releases/": "Releases",
   "/store/": "Store",
-  "/history/": "History",
+  "/Shows/": "Shows",
   "/contact/": "Contact",
 };
 // Determine the active route
@@ -19,9 +19,9 @@ const activeRoute = routes[currentPath] || null;
 <header>
   <h1>
     <a href="/" class={activeRoute === "Home" ? "current" : ""}
-      ><TextSlider content="Players Club" /></a>
+      ><TextSlider content="PHICTION" /></a>
   </h1>
-  <span><TextSlider content="Record Label" /></span>
+  <span><TextSlider content="fn Records" /></span>
   <ul>
     <li>
       <a
@@ -31,9 +31,9 @@ const activeRoute = routes[currentPath] || null;
     </li>
     <li>
       <a
-        href="/history/"
-        class={activeRoute === "History" ? "current" : ""}
-        data-astro-prefetch><TextSlider content="History" /></a>
+        href="/Shows/"
+        class={activeRoute === "Shows" ? "current" : ""}
+        data-astro-prefetch><TextSlider content="Shows" /></a>
     </li>
     <li>
       <a
@@ -57,14 +57,14 @@ const activeRoute = routes[currentPath] || null;
     display: grid;
     grid-template-columns: min-content auto;
     font-weight: 700;
-    padding: 1rem 0;
-    gap: 1rem;
+    padding: 2rem 0;
+    gap: 2rem;
   }
   header a.current {
     pointer-events: none;
   }
   h1 {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: inherit;
     margin: 0;
   }
