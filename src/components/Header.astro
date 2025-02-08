@@ -21,7 +21,6 @@ const activeRoute = routes[currentPath] || null;
     <a href="/" class={activeRoute === "Home" ? "current" : ""}
       ><TextSlider content="PHICTION" /></a>
   </h1>
-  <span><TextSlider content="fn Records" /></span>
   <ul>
     <li>
       <a
@@ -53,18 +52,20 @@ const activeRoute = routes[currentPath] || null;
 
 <style>
   header {
+    grid-template-columns: auto 1fr auto;
     position: relative;
     display: grid;
     grid-template-columns: min-content auto;
     font-weight: 700;
-    padding: 2rem 0;
-    gap: 2rem;
+    padding: 1rem 0;
+    gap: 0rem;
+    align-items: center;
   }
   header a.current {
     pointer-events: none;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: inherit;
     margin: 0;
   }
@@ -75,6 +76,8 @@ const activeRoute = routes[currentPath] || null;
     margin: 0;
     padding: 0;
     grid-column: auto / span 2;
+    font-size: 1rem;
+    justify-self: end;
   }
   @media screen and (min-width: 50em) {
     header {
